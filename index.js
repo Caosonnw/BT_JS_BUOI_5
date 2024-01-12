@@ -145,6 +145,8 @@ document.getElementById("btn_TienThue").onclick = function () {
     currency: "VND",
   })} VNĐ`;
 };
+
+// Bài 4
 function toggleSoKetNoiInput() {
   var loaiKhachHang = document.getElementById("sl_loaiKhachHang").value;
   var txtSoKetNoi = document.getElementById("txt_soKetNoi");
@@ -157,6 +159,11 @@ document.getElementById("btn_tinhTienCap").onclick = function () {
   var soKetNoi = parseInt(document.getElementById("txt_soKetNoi").value) || 0;
   var soKenhCaoCap =
     parseInt(document.getElementById("txt_soKenhCaoCap").value) || 0;
+
+  if (loaiKhachHang !== "1" && loaiKhachHang !== "2") {
+    alert("Vui lòng chọn loại khách hàng.");
+    return;
+  }
 
   var phiXuLyHoaDon = 0;
   var phiDichVuCoBan = 0;
